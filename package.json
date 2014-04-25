@@ -1,0 +1,28 @@
+{
+  "name": "koa-compressor",
+  "description": "Compress middleware for koa that always compresses",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jonathan Ong",
+    "email": "me@jongleberry.com",
+    "url": "http://jongleberry.com",
+    "twitter": "https://twitter.com/jongleberry"
+  },
+  "license": "MIT",
+  "repository": "koajs/compressor",
+  "dependencies": {
+    "statuses": "1",
+    "koa-is-json": "1",
+    "compressible": "1",
+    "bytes": "0"
+  },
+  "devDependencies": {
+    "koa": "*",
+    "mocha": "*",
+    "should": "*",
+    "supertest": "*"
+  },
+  "scripts": {
+    "test": "NODE_ENV=test mocha --require should --harmony-generators --reporter spec --bail"
+  }
+}
