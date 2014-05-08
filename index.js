@@ -2,8 +2,8 @@
 var compressible = require('compressible')
 var isJSON = require('koa-is-json')
 var status = require('statuses')
+var zlib = require('mz/zlib')
 var bytes = require('bytes')
-var zlib = require('zlib')
 
 module.exports = function (options) {
   options = options || {}
@@ -29,12 +29,6 @@ module.exports = function (options) {
 
     this.body = typeof body.pipe === 'function'
       ? body.pipe(zlib.Gzip(options))
-      : (yield gzip(body))
-  }
-}
-
-function gzip(buf) {
-  return function (done) {
-    zlib.gzip(buf, done)
+      : (yield zlib.gzip(body))
   }
 }
