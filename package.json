@@ -12,15 +12,15 @@
   "repository": "koajs/compressor",
   "dependencies": {
     "mz": "0",
+    "bytes": "1",
     "statuses": "1",
     "koa-is-json": "1",
-    "compressible": "1",
-    "bytes": "0"
+    "compressible": "1"
   },
   "devDependencies": {
     "koa": "*",
     "mocha": "*",
-    "should": "*",
+    "should": "3",
     "supertest": "*"
   },
   "scripts": {
