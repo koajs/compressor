@@ -11,7 +11,7 @@
   "license": "MIT",
   "repository": "koajs/compressor",
   "dependencies": {
-    "mz": "1",
+    "mz": "2.2.0",
     "bytes": "1",
     "statuses": "1",
     "koa-is-json": "1",
