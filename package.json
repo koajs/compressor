@@ -1,7 +1,7 @@
 {
   "name": "koa-compressor",
   "description": "Compress middleware for koa that always compresses",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": {
     "name": "Jonathan Ong",
     "email": "me@jongleberry.com",
@@ -11,23 +11,23 @@
   "license": "MIT",
   "repository": "koajs/compressor",
   "dependencies": {
-    "mz": "1",
-    "bytes": "1",
+    "mz": "2.4",
+    "bytes": "2.4",
     "statuses": "1",
     "koa-is-json": "1",
     "compressible": "2"
   },
   "devDependencies": {
-    "koa": "0",
-    "mocha": "1",
+    "koa": "1",
+    "mocha": "3.1.0",
     "should": "3",
     "supertest": "0",
     "istanbul-harmony": "0"
   },
   "scripts": {
-    "test": "NODE_ENV=test mocha --harmony-generators --require should --reporter spec",
-    "test-cov": "NODE_ENV=test node --harmony-generators ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --require should",
-    "test-travis": "NODE_ENV=test node --harmony-generators ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- --require should"
+    "test": "NODE_ENV=test mocha --harmony --require should --reporter spec",
+    "test-cov": "NODE_ENV=test node --harmony ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --require should",
+    "test-travis": "NODE_ENV=test node --harmony ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- --require should"
   },
   "files": [
     "index.js"
@@ -37,5 +37,8 @@
     "http",
     "compress",
     "gzip"
-  ]
+  ],
+  "engines": {
+    "node" : ">4.2"
+  }
 }
